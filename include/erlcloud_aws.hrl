@@ -31,10 +31,18 @@
           kinesis_host="kinesis.us-east-1.amazonaws.com"::string(),
           kinesis_port=80::non_neg_integer(),
           kinesis_retry=fun erlcloud_kinesis_impl:retry/2::erlcloud_kinesis_impl:retry_fun(),
+
           kinesis_firehose_scheme="https://"::string(),
           kinesis_firehose_host="firehose.us-east-1.amazonaws.com"::string(),
           kinesis_firehose_port=80::non_neg_integer(),
           kinesis_firehose_retry=fun erlcloud_kinesis_firehose_impl:retry/2::erlcloud_kinesis_firehose_impl:retry_fun(),
+
+          ml_scheme="https://"::string(),
+          ml_host="realtime.machinelearning.us-east-1.amazonaws.com"::string(),
+          ml_region="us-east-1"::string(),
+          ml_port=80::non_neg_integer(),
+          ml_retry=fun erlcloud_ml_impl:retry/2::erlcloud_ml_impl:retry_fun(),
+  
           cloudtrail_scheme="https://"::string(),
           cloudtrail_host="cloudtrail.amazonaws.com"::string(),
           cloudtrail_port=80::non_neg_integer(),
